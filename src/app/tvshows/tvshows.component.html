@@ -1,0 +1,23 @@
+<div class="row mt-5 w-75">
+    <input type="text" class="form-cotrol" [(ngModel)]="searchValue"/>
+    <h4>{{searchValue}}</h4>
+    <!-- <h1>{{totalTVshows}}</h1> -->
+</div>
+ 
+<div class= "row mt-4" >
+    <div class="row" style="background-color:floralwhite;" *ngFor="let tvShow of allTVshows">
+      <!-- image -->
+       <div class="col">
+            <img
+              src="{{ imagePath + tvShow.poster_path }}" 
+              class="card-img-top"
+              alt="..." style="width: 250px;"
+            />
+        </div>
+             <!-- title and description -->
+        <div class="col" style="margin: auto;">
+            <h3>{{ tvShow?.name }}</h3>
+            <p>{{ tvShow?.overview }}</p>
+        </div>
+    </div>
+  </div>

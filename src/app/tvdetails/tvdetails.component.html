@@ -1,0 +1,17 @@
+<div class="container px-3 text-center">
+    <div class="row" style="background-color:floralwhite;">
+      <!-- image -->
+       <div class="col">
+            <img
+              src="{{ imagePath + selectedTV.poster_path }}" 
+              class="card-img-top"
+              alt="..." style="width: 250px;"
+            />
+        </div>
+             <!-- title and description -->
+        <div class="col" style="margin: auto;">
+            <h3>{{ selectedTV?.name }}</h3>
+            <p>{{ selectedTV?.overview }}</p>
+        </div>
+    </div>
+  </div>
